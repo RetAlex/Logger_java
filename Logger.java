@@ -1,4 +1,4 @@
-package libs.Logging;
+package libs.logger;
 
 
 import java.util.Date;
@@ -54,8 +54,10 @@ public class Logger {
         try {
             String callerName = null;
             for (StackTraceElement stackTraceElement : Thread.currentThread().getStackTrace()) {
-                if(!stackTraceElement.getClassName().contains("Logger"))
+                if(!stackTraceElement.getClassName().contains("Logger")) {
                     callerName = stackTraceElement.getClassName();
+                    break;
+                }
             }
             writeToFile(loggerPrefixStatic+"/exceptions/"+(callerName!=null?callerName.substring(callerName.lastIndexOf(".")+1)+".txt":"Unknown"), message.toString());
         } catch (Exception e2) {
