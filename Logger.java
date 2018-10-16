@@ -3,7 +3,8 @@ package libs.logger;
 
 import java.util.Date;
 
-import static libs.Logging.FileUtils.writeToFile;
+import static libs.logger.FileUtils.writeToFile;
+
 
 public class Logger {
     public static String loggerPrefixStatic= "";

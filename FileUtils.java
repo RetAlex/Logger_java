@@ -1,4 +1,4 @@
-package libs.Logging;
+package libs.logger;
 
 import java.io.File;
 import java.io.FileWriter;
